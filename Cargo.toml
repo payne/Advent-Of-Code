@@ -1,0 +1,6 @@
+[package]
+name = "adv_code"
+version = "0.1.0"
+authors = ["HeroesGrave <heroesgrave@gmail.com>"]
+
+[dependencies]
