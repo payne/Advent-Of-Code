@@ -15,6 +15,8 @@ pub fn receiving_presents(input: &str, robot: bool) -> usize {
     let ref mut santa_pos = (0, 0);
     let ref mut swap_pos = (0, 0);
 
+    visited.insert(*santa_pos);
+
     for c in input.chars() {
         match c {
             '<' => santa_pos.0 -= 1,
