@@ -39,7 +39,7 @@ fn main() {
             match day.parse::<usize>() {
                 Ok(0) => run_latest(),
                 Ok(day) if day <= CHALLENGES.len() => {
-                println!("+=============================+");
+                    println!("+=============================+");
                     println!("|Running challenge from day {:0>2?}|", day);
                     println!("+=============================+");
                     CHALLENGES[day-1]();

@@ -3,7 +3,7 @@ use std::cmp::{max, min};
 use std::ops::Add;
 use std::str::FromStr;
 
-static INPUT: &'static str = include_str!("day2_input.txt");
+static INPUT: &'static str = include_str!("input/day2.txt");
 
 struct Dimension {
     width: u32,
@@ -40,8 +40,8 @@ impl Dimension {
 
 pub fn main() {
     let dimensions = parse(INPUT);
-    println!("Total Area: {:?}", total_area(&dimensions));
-    println!("Total Ribbon Length: {:?}", total_ribbon(&dimensions));
+    println!("(Part 1) Total Area: {:?}", total_area(&dimensions));
+    println!("(Part 2) Total Ribbon Length: {:?}", total_ribbon(&dimensions));
 }
 
 fn total_ribbon(dimensions: &[Dimension]) -> u32 {
@@ -56,6 +56,8 @@ fn parse(input: &str) -> Vec<Dimension> {
     input.lines().map(|line| Dimension::from_str(line).unwrap()).collect()
 }
 
+// Usage of unwrap here isn't that good, but it won't cause problems as long as the input
+// is valid. If the input is invalid, then I need to check over it anyway.
 impl FromStr for Dimension {
     type Err = <u32 as FromStr>::Err;
     fn from_str(input: &str) -> Result<Self, Self::Err> {

@@ -2,11 +2,11 @@
 use std::collections::HashSet;
 use std::mem;
 
-static INPUT: &'static str = include_str!("day3_input.txt");
+static INPUT: &'static str = include_str!("input/day3.txt");
 
 pub fn main() {
-    println!("Recieving Presents: {:?}", receiving_presents(INPUT, false));
-    println!("Recieving Presents with robot: {:?}", receiving_presents(INPUT, true));
+    println!("(Part 1) Recieving Presents: {:?}", receiving_presents(INPUT, false));
+    println!("(Part 2) Recieving Presents with robot: {:?}", receiving_presents(INPUT, true));
 }
 
 pub fn receiving_presents(input: &str, robot: bool) -> usize {

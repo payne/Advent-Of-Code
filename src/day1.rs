@@ -1,9 +1,9 @@
 
-static INPUT: &'static str = include_str!("day1_input.txt");
+static INPUT: &'static str = include_str!("input/day1.txt");
 
 pub fn main() {
-    println!("Final Floor: {:?}", part1(INPUT));
-    println!("Basement Position: {:?}", part2(INPUT));
+    println!("(Part 1) Final Floor: {:?}", part1(INPUT));
+    println!("(Part 2) Basement Position: {:?}", part2(INPUT));
 }
 
 fn part1(input: &str) -> i32 {
