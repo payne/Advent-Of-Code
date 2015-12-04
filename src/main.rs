@@ -27,7 +27,7 @@ macro_rules! days {
 }
 
 days!(
-    day1, day2; day3
+    day1, day2, day3; day4
 );
 
 fn main() {
